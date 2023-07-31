@@ -31,7 +31,7 @@ mount_roms_dir() {
   _tgt='/home/pi/RetroPie/roms'
   _usr='username=retropie'
   _pwd="password=${CIFSPASSWD}"
-  _opts='nounix,noserverino,defaults,users,auto'
+  _opts='uid=1000,nounix,noserverino,defaults,users,auto'
 
   grep -q "$_tgt" /etc/fstab || {
     cat << EOF >>/etc/fstab
